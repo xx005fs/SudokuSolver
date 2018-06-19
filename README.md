@@ -1,7 +1,12 @@
 # SudokuSolver
 A java console programme that is derived from my repository called SudokuGame. This programme will allow you to type in a string representing a valid board of Sudoku, and the programme will determine whether the Sudoku is solvable or not. If it is solvable, the programme will display the solved Sudoku to the user.
 # Introduction
+## Currently the only way to solve your own Sudoku is to open the source code and change one of the difficulty board and then choose 'I give up' later to show the solution. The better interface will be implemented later.
+
+This version has an added recursion brute force solver that I got inspired online by baeldung on the website of http://www.baeldung.com/java-sudoku. The recursion solver implements backtracking and tries all the combinations possible on this board and eventually finding the final solution. This allows the programme to be able to solve any valid Sudoku board given by the user possible and whenever it is not possible to solve it would show the user that this board is not solved. There will be a brute force solver that will do the same thing but instead of using the dangerous tail recursion I will be using a while loop instead of tail recursion which should make the solver faster and more efficient.
+
 ### ALL THE FEATURES WILL BE IMPLEMENTED LATER...
+
 This programme starts off to let the user to type in a string of a Sudoku board. A valid string of a Sudoku board is that there is no repeat of numbers in a row, column, and cell. The programme will check that automatically and if the user input doesn't satisfy the requirements, the programme will exit before it even starts trying to solve the Sudoku.
 
 Also, the programme was added a new bruteForce() method, which is a brute force solver for the Sudoku board that is not using recursion. It is a back tracking method but instead of using recursion I decided to use while loop instead. There is a variable in the method that stores the previous value of a certain block, and then whenever it realize that at some block that all numbers from 1 to 9 won't be able to fill in, it will back track to the previous blocks and try different numbers that are after the stored value on that block before. If the solver couldn't solve a Sudoku, this means that the Sudoku board can only be invalid to be unsolveable because the brute force method will check all possible combination of a certain board, and if the board has no matching combination, this means that there is a mistake in this certain board.
