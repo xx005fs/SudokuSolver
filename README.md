@@ -2,11 +2,8 @@
 A java console programme that is derived from my repository called SudokuGame. This programme will allow you to type in a string representing a valid board of Sudoku, and the programme will determine whether the Sudoku is solvable or not. If it is solvable, the programme will display the solved Sudoku to the user.
 
 # Introduction
-## Currently the only way to solve your own Sudoku is to open the source code and change one of the difficulty board and then choose 'I give up' later to show the solution. The better interface will be implemented later.
 
 This version has an added recursion brute force solver that I got inspired online by baeldung on the website of http://www.baeldung.com/java-sudoku. The recursion solver implements backtracking and tries all the combinations possible on this board and eventually finding the final solution. This allows the programme to be able to solve any valid Sudoku board given by the user possible and whenever it is not possible to solve it would show the user that this board is not solved. There will be a brute force solver that will do the same thing but instead of using the dangerous tail recursion I will be using a while loop instead of tail recursion which should make the solver faster and more efficient.
-
-### ALL THE FEATURES WILL BE IMPLEMENTED LATER...
 
 This programme starts off to let the user to type in a string of a Sudoku board. A valid string of a Sudoku board is that there is no repeat of numbers in a row, column, and cell. The programme will check that automatically and if the user input doesn't satisfy the requirements, the programme will exit before it even starts trying to solve the Sudoku.
 
@@ -23,3 +20,5 @@ The available blocks that can be filled in in the board that the user choose to 
 
 ### How Does The Speed Compare to Iterative Solver
 I am still working on the iteration solver currently, and the iteration solver works on the same principle, whenever it finds a block that can't find all the numbers, it will store that block value down and then start going backwards. When the block works, it will keep on going and going until the board is solved. It uses a while loop which make it basically function like recursion but is way way less resource intensive. With current benchmarks the sorted recursion method usually takes about 160-200 miliseconds to solve a board while the iteration method uses about 40-50 miliseconds. This indicates that the iteration solver is about 4 times faster than the recursive solver, which makes the user interface much snappier as the computer wouldn't spend much time at all trying to solve the Sudoku.
+
+# Other Informations
