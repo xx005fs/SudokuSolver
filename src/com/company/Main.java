@@ -1,5 +1,8 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Main {
@@ -9,15 +12,19 @@ public class Main {
     //046005700000900000090001006000000900030000000400520008080000070570300082200000300
     //000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
-    public static void main(String[] args) {
-        run();
+    public static void main(String[] args) throws IOException {
+        Main obj = new Main();
+        obj.run();
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("\nPress enter to continue...");
+        in.readLine();
     }
 
     private static void displayMenu() {
         System.out.println("\n" + MYSPACE + "Type in the string of the Sudoku you want to solve, a blank space in a board is a zero...\n");
     }
 
-    private static void run() {
+    private void run() {
         Scanner scanner = new Scanner(System.in);
         boolean endGame = false;
         String usrChoice;
